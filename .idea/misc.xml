@@ -87,5 +87,5 @@
       <textMaps />
     </LinkMapSettings>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.5 (/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 3.6.8 Docker Compose (django at [/Users/pnore/dev/insta-graphql-django/instagraphql_django/local.yml])" project-jdk-type="Python SDK" />
 </project>
