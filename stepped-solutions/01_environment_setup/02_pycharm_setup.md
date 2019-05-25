@@ -17,8 +17,9 @@ outside of docker and connect PyCharm to it that way.
 1. In the Settings/Preferences dialog (⌘,), 
    select Project <project name> | Project Interpreter. 
    Click the The Configure project interpreter icon and select Add.
-   
-### Add Remote Interpreter - PyCharm Professional
+
+<details><summary>Add Remote Interpreter - PyCharm Professional (Optional)</summary>
+<p>
 Follow the steps from [Pycharm Docs - Configuring Docker Compose as a remote interpreter](https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html#docker-compose-remote)
 1. If you don't have the default `Docker` showing up under `server`, you'll need to follow 
    [Pycharm Docs - Configuring Docker](https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html#configuring-docker),
@@ -30,6 +31,8 @@ Follow the steps from [Pycharm Docs - Configuring Docker Compose as a remote int
    that contains python
 4. For `Python Interpreter Path`, accept the default `python`. You can see 
    that python is accessed is accessed this way in `compose/local/django/start`.
+</p>
+</details>
 
 
 ## Set Up Django Project Configuration In PyCharm
@@ -40,9 +43,14 @@ Follow the steps from [Pycharm Docs - Configuring Docker Compose as a remote int
 5. `Settings` - select the `config/settings/local.py` file
 
 
-## Add Run Configuration in PyCharm
-This will enable us to run Django's Runserver from within PyCharm, which 
-also enables running the integrated debugger.
+<details><summary>Add Run Configuration in PyCharm (Optional)</summary>
+<p>
+This will enable us to run the site with Django's Runserver inside PyCharm, which 
+also enables running the PyCharm integrated debugger. If you already know 
+PyCharm's debugger, these steps can be helpful, but if not, you do not need to.
+The entrypoint at `instagraphql_django/compose/local/django/start` already runs
+[`runserver_plus`](https://django-extensions.readthedocs.io/en/latest/runserver_plus.html),
+which has a Werkzeug-based debugger.
 
 These instructions are adapted from [Pycharm Docs - Running your application under Docker-Compose #](https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html#run),
 but they apply to both the PyCharm Professional and Community editions.
@@ -51,13 +59,15 @@ but they apply to both the PyCharm Professional and Community editions.
 2. in the dialog that opens, click the + sign (Add Run/Debug configuration for a Django Server) 
    and select _Django Server_
 3. Name: Django Runserver
-4. Host should be set to `0.0.0.0`
+4. Host should be set to `0.0.0.0` and port should be `8001`
 5. The Python Interpreter should be set to whatever python interpreter 
    you configured above, depending on whether you have PyCharm Professional 
    or Community Edition
 6. click OK
 7. Launch the new run configuration by selecting Run | Run 'Django Runserver'
-8. To see the app in your web browser, go to http://localhost:8000
+8. To see the app in your web browser, go to http://localhost:8001
+</p>
+</details>
 
 ## Add Database Configuration in PyCharm
 This method of adding a Data Source to PyCharm works in both editions.
