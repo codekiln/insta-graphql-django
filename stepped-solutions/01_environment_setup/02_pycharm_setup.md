@@ -18,9 +18,10 @@ outside of docker and connect PyCharm to it that way.
    select Project <project name> | Project Interpreter. 
    Click the The Configure project interpreter icon and select Add.
 
-<details><summary>Add Remote Interpreter - PyCharm Professional (Optional)</summary>
+<details><summary>### Add Remote Interpreter - PyCharm Professional (Optional)</summary>
 <p>
 Follow the steps from [Pycharm Docs - Configuring Docker Compose as a remote interpreter](https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html#docker-compose-remote)
+
 1. If you don't have the default `Docker` showing up under `server`, you'll need to follow 
    [Pycharm Docs - Configuring Docker](https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html#configuring-docker),
    but by default this should be installed if you have the Professional
@@ -31,6 +32,7 @@ Follow the steps from [Pycharm Docs - Configuring Docker Compose as a remote int
    that contains python
 4. For `Python Interpreter Path`, accept the default `python`. You can see 
    that python is accessed is accessed this way in `compose/local/django/start`.
+
 </p>
 </details>
 
@@ -43,7 +45,7 @@ Follow the steps from [Pycharm Docs - Configuring Docker Compose as a remote int
 5. `Settings` - select the `config/settings/local.py` file
 
 
-<details><summary>Add Run Configuration in PyCharm (Optional)</summary>
+<details><summary>### Add Run Configuration in PyCharm (Optional)</summary>
 <p>
 This will enable us to run the site with Django's Runserver inside PyCharm, which 
 also enables running the PyCharm integrated debugger. If you already know 
