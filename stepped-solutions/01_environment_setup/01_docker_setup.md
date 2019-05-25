@@ -9,8 +9,11 @@
   1. For more commands, see [Getting Up and running Locally With Docker](https://cookiecutter-django.readthedocs.io/en/latest/developing-locally-docker.html)
 4. Instantiate the container to bring up the environment
   1. `docker-compose -f local.yml up`
-5. Connect to postgres with `psql`
+5. Connect to postgres with `psql` to validate it works (optional)
   1. use the `POSTGRES_USER` and `POSTGRES_DB` from `instagraphql_django/.envs/.local/.postgres`
+     * tip: if using a bash-based terminal you can use 
+       `set -a; . instagraphql_django/.envs/.local/.postgres; set +a;` to source the variables 
+       in that file into the shell
   2. `docker-compose -f local.yml exec postgres psql -d $POSTGRES_DB -U $POSTGRES_USER`
   3. inside the postgres shell, take a look around with postgres commands such as `/list`
 
