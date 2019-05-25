@@ -56,11 +56,11 @@ The entrypoint at `instagraphql_django/compose/local/django/start` already runs
 [`runserver_plus`](https://django-extensions.readthedocs.io/en/latest/runserver_plus.html),
 which has a Werkzeug-based debugger.
 
-These instructions are adapted from [Pycharm Docs - Running your application under Docker-Compose #](https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html#run),
+These instructions are adapted from [Pycharm Docs - Running your application under Docker-Compose](https://www.jetbrains.com/help/pycharm/using-docker-compose-as-a-remote-interpreter.html#run),
 but they apply to both the PyCharm Professional and Community editions.
 
-1. On the main menu choose Run | Edit Configurations...; 
-2. in the dialog that opens, click the + sign (Add Run/Debug configuration for a Django Server) 
+1. On the main menu choose `Run | Edit Configurations...` 
+2. in the dialog that opens, click the &#43; sign (Add Run/Debug configuration for a Django Server) 
    and select _Django Server_
 3. Name: Django Runserver
 4. Host should be set to `0.0.0.0` and port should be `8001`
