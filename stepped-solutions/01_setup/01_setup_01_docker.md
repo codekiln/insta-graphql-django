@@ -18,3 +18,7 @@
   2. `docker-compose exec postgres psql -d $POSTGRES_DB -U $POSTGRES_USER`
   3. inside the postgres shell, take a look around with postgres commands such as `/list`
 
+## run `export COMPOSE_FILE=local.yml` before using `docker-compose` in this project
+Note: the docker commands here assume that you have run `export COMPOSE_FILE=local.yml` 
+in your terminal and that you are in the `instagraphql_django` folder. If you haven't 
+run this command, you'll need to append `-f local.yml` to every `docker-compose` invocation.

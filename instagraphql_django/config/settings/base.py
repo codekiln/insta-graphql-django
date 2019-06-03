@@ -68,6 +68,7 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "graphene_django"
 ]
 LOCAL_APPS = [
     "instagraphql_django.users.apps.UsersConfig",
@@ -260,5 +261,6 @@ SOCIALACCOUNT_ADAPTER = "instagraphql_django.users.adapters.SocialAccountAdapter
 # django-graphene
 # ------------------------------------------------------------------------------
 GRAPHENE = {
+    # 'SCHEMA': 'users.schema.schema'
     'SCHEMA': 'config.schema.schema'
 }
